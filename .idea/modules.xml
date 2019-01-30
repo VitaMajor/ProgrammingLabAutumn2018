@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2DGame.iml" filepath="$PROJECT_DIR$/.idea/modules/2DGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2DGame_main.iml" filepath="$PROJECT_DIR$/.idea/modules/2DGame_main.iml" group="2DGame" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2DGame_test.iml" filepath="$PROJECT_DIR$/.idea/modules/2DGame_test.iml" group="2DGame" />
       <module fileurl="file://C:/lab6/lab6.iml" filepath="C:/lab6/lab6.iml" />
     </modules>
   </component>
