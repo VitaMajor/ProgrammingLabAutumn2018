@@ -45,17 +45,15 @@ public class AI {
                 for (int right = -1; right <= 1; right += 2) {
                     for (int i = 0; i < game.playerTwo.getMoves(); i++) {
                         for (int j = 0; j < game.playerTwo.getMoves(); j++) {
-                            if (moviesCheck(player, i, j)) {
-                                if (checkMove(move, right, up, i, j)) {
-                                    if (checkPlace(right, up, i, j)) {
-                                        continue;
-                                    } else {
-                                        if (checkFreePlace(right, up, i, j)) {
-                                            moveX = game.playerTwoX + (i * right);
-                                            moveY = game.playerTwoY + (j * up);
-                                            move = (Math.sqrt(Math.pow(game.playerOneX - (game.playerTwoX + (i * right)), 2)
-                                                    + Math.pow(game.playerOneY - (game.playerTwoY + (j * up)), 2)));
-                                        }
+                            if (moviesCheck(player, i, j) && checkMove(move, right, up, i, j)) {
+                                if (checkPlace(right, up, i, j)) {
+                                    continue;
+                                } else {
+                                    if (checkFreePlace(right, up, i, j)) {
+                                        moveX = game.playerTwoX + (i * right);
+                                        moveY = game.playerTwoY + (j * up);
+                                        move = (Math.sqrt(Math.pow(game.playerOneX - (game.playerTwoX + (i * right)), 2)
+                                                + Math.pow(game.playerOneY - (game.playerTwoY + (j * up)), 2)));
                                     }
                                 }
                             }
@@ -65,17 +63,15 @@ public class AI {
                         double moveLeave = 0;
                         for (int i = 0; i < game.playerTwo.getMoves(); i++) {
                             for (int j = 0; j < game.playerTwo.getMoves(); j++) {
-                                if (moviesCheck(player, i, j)) {
-                                    if (checkMoveLeave(moveLeave, right, up, i, j)) {
-                                        if (checkPlace(right, up, i, j)) {
-                                            continue;
-                                        } else {
-                                            if (checkFreePlace(right, up, i, j)) {
-                                                moveX = game.playerTwoX + (i * right);
-                                                moveY = game.playerTwoY + (j * up);
-                                                moveLeave = (Math.sqrt(Math.pow(game.playerOneX - (game.playerTwoX + (i * right)), 2)
-                                                        + Math.pow(game.playerOneY - (game.playerTwoY + (j * up)), 2)));
-                                            }
+                                if (moviesCheck(player, i, j) && checkMoveLeave(moveLeave, right, up, i, j)) {
+                                    if (checkPlace(right, up, i, j)) {
+                                        continue;
+                                    } else {
+                                        if (checkFreePlace(right, up, i, j)) {
+                                            moveX = game.playerTwoX + (i * right);
+                                            moveY = game.playerTwoY + (j * up);
+                                            moveLeave = (Math.sqrt(Math.pow(game.playerOneX - (game.playerTwoX + (i * right)), 2)
+                                                    + Math.pow(game.playerOneY - (game.playerTwoY + (j * up)), 2)));
                                         }
                                     }
                                 }
